@@ -1,0 +1,358 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f4f7fc; 
+    color: #1e293b;
+    display: flex;
+}
+
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    border-right: 1px solid #e2e8f0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    padding-left: 0.5rem;
+    border-bottom: 3px solid #2563eb;
+    width: fit-content;
+    padding-bottom: 0.25rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.menu a:hover, .menu a.active {
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+.footer-sidebar {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    padding-left: 0.5rem;
+}
+
+
+.main-content {
+    margin-left: 260px;
+    flex-grow: 1;
+    padding: 0 4rem;
+}
+
+
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+   
+    background: radial-gradient(circle at 20% 30%, #e0e7ff 0%, transparent 40%);
+}
+
+.left-home {
+    max-width: 550px;
+}
+
+.greeting {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+    background-color: #f8fafc;
+}
+
+.btn-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.social-options a img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: opacity(0.6);
+    transition: filter 0.2s;
+}
+
+.social-options a:hover img {
+    filter: opacity(1);
+}
+
+.right-home .image-wrapper {
+    width: 420px;
+    height: 420px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.right-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.5;
+}
+
+
+.about-section, .skills-section {
+    padding: 6rem 0;
+}
+
+.about-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.about-pill-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.pill-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #dbeafe;
+    color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.25rem auto;
+}
+
+.about-pill-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.about-pill-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+
+.cards-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2563eb; 
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+
+.skill-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    background-color: #eff6ff; 
+    color: #1e40af;            
+    border-radius: 2rem;      
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    background-color: #dbeafe;
+}
+
+.skill-item img {
+    width: 1.1rem;
+    height: 1.1rem;
+    object-fit: contain;
+}
+
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 0 2rem;
+    }
+    .home-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-top: 4rem;
+        text-align: center;
+    }
+    .cta-buttons {
+        justify-content: center;
+    }
+    .right-home .image-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 1rem;
+    }
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-sidebar {
+        display: none;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 0 1.5rem;
+    }
+}
