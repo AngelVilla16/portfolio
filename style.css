@@ -1106,6 +1106,16 @@ input, textarea {
   }
 }
 
+/* Spinner Animation for Form Submit */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
 /* Print styles */
 @media print {
   .header,
